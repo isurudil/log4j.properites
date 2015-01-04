@@ -1,5 +1,5 @@
 # Root Logger
-log4j.rootLogger = DEBUG, debug, info, error
+log4j.rootLogger = DEBUG, debug, info, error, console
 
 #################################################################
 #                     Debug Log Properties                      #
@@ -54,6 +54,23 @@ log4j.appender.info.layout=org.apache.log4j.PatternLayout
 log4j.appender.info.layout.conversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
 
 log4j.appender.info.Threshold = INFO
+
+
+#################################################################
+#                     Console Properties                        #
+#################################################################
+
+# Info log file appender
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+
+# Info log file
+log4j.appender.console.Target=System.out
+
+# Info log layout for file appender
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+
+# Info log conversion pattern
+log4j.appender.console.layout.conversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
 
 
 
